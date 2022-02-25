@@ -1,13 +1,13 @@
 [//]: # (title: Caching)
 
-<microformat>
+<tldr>
 <var name="example_name" value="client-caching"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 The HttpCache allows you to save previously fetched resources in an in-memory cache.
-</excerpt>
+</link-summary>
 
 The Ktor client provides the `HttpCache` plugin that allows you to save previously fetched resources in an in-memory cache.
 

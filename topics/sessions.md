@@ -3,7 +3,7 @@
 <var name="plugin_name" value="Sessions"/>
 <var name="artifact_name" value="ktor-server-sessions"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
@@ -12,11 +12,11 @@
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/session-cookie-server">session-cookie-server</a>,
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/session-header-server">session-header-server</a>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>
+<link-summary>
 Sessions provide a mechanism to persist data between different HTTP requests. Typical use cases include storing a logged-in user's ID, the contents of a shopping basket, or keeping user preferences on the client.
-</excerpt>
+</link-summary>
 
 The `%plugin_name%` plugin provides a mechanism to persist data between different HTTP requests. Typical use cases include storing a logged-in user's ID, the contents of a shopping basket, or keeping user preferences on the client. In Ktor, you can implement sessions by using cookies or custom headers, choose whether to store session data on the server or pass it to the client, sign and encrypt session data and more.
 
@@ -25,11 +25,11 @@ In this topic, we'll look at how to install the `%plugin_name%` plugin, configur
 ## Add dependencies {id="add_dependencies"}
 To enable support for sessions, you need to include the `%artifact_name%` artifact in the build script:
 
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install Sessions {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Session configuration overview {id="configuration_overview"}

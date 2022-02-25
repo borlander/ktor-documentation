@@ -1,8 +1,8 @@
 [//]: # (title: Plugins)
 
-<excerpt>
+<link-summary>
 Get acquainted with plugins that provide common functionality, for example, logging, serialization, authorization, etc.
-</excerpt>
+</link-summary>
 
 Many applications require common functionality that is out of scope of the application logic. This could be things like [logging](client_logging.md),  [serialization](serialization-client.md), or [authorization](auth.md). All of these are provided in Ktor by means of what we call **Plugins**. 
 
@@ -11,7 +11,7 @@ Many applications require common functionality that is out of scope of the appli
 A plugin might require a separate dependency. For example, the [Logging](client_logging.md) plugin requires adding the `ktor-client-logging` artifact in the build script:
 
 <var name="artifact_name" value="ktor-client-logging"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 You can learn which dependencies you need from a topic for a required plugin.
 

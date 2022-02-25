@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/stardust/html-entities.dtd">
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
 
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/topic.v2.xsd"
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        title="Adding Ktor dependencies"
-       id="server-dependencies" auxiliary-id="Gradle">
+       id="server-dependencies" help-id="Gradle">
 
-    <excerpt>Learn how to add Ktor dependencies to the existing Gradle/Maven project.</excerpt>
+    <link-summary>Learn how to add Ktor dependencies to the existing Gradle/Maven project.</link-summary>
 
     <p>
         In this topic, we'll show you how to add dependencies required for Ktor to the existing Gradle/Maven project.
@@ -27,18 +27,18 @@
                 </p>
                 <tabs group="languages">
                     <tab title="Gradle (Kotlin)" group-key="kotlin">
-                        <code style="block" lang="Kotlin" interpolate-variables="true">
+                        <code-block lang="Kotlin" interpolate-variables="true">
                             repositories {
                                 mavenCentral()
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Gradle (Groovy)" group-key="groovy">
-                        <code style="block" lang="Groovy" interpolate-variables="true">
+                        <code-block lang="Groovy" interpolate-variables="true">
                             repositories {
                                 mavenCentral()
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Maven" group-key="maven">
                         <note>
@@ -59,25 +59,25 @@
                 </p>
                 <tabs group="languages">
                     <tab title="Gradle (Kotlin)" group-key="kotlin">
-                        <code style="block" lang="Kotlin">
+                        <code-block lang="Kotlin">
                             repositories {
                                 maven {
                                     url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
                                 }
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Gradle (Groovy)" group-key="groovy">
-                        <code style="block" lang="Groovy">
+                        <code-block lang="Groovy">
                             repositories {
                                 maven {
                                     url "https://maven.pkg.jetbrains.space/public/p/ktor/eap"
                                 }
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Maven" group-key="maven">
-                        <code style="block" lang="XML">
+                        <code-block lang="XML">
                             <![CDATA[
                             <repositories>
                                 <repository>
@@ -86,7 +86,7 @@
                                 </repository>
                             </repositories>
                             ]]>
-                        </code>
+                        </code-block>
                     </tab>
                 </tabs>
             </li>
@@ -121,25 +121,25 @@
         </p>
         <tabs group="languages">
             <tab title="Gradle (Kotlin)" group-key="kotlin">
-                <code style="block" lang="Kotlin" interpolate-variables="true">
+                <code-block lang="Kotlin" interpolate-variables="true">
                     dependencies {
                         implementation("io.ktor:ktor-server-core:%ktor_version%")
                         implementation("io.ktor:ktor-server-netty:%ktor_version%")
                         implementation("ch.qos.logback:logback-classic:%logback_version%")
                     }
-                </code>
+                </code-block>
             </tab>
             <tab title="Gradle (Groovy)" group-key="groovy">
-                <code style="block" lang="Groovy" interpolate-variables="true">
+                <code-block lang="Groovy" interpolate-variables="true">
                     dependencies {
                         implementation "io.ktor:ktor-server-core:%ktor_version%"
                         implementation "io.ktor:ktor-server-netty:%ktor_version%"
                         implementation "ch.qos.logback:logback-classic:%logback_version%"
                     }
-                </code>
+                </code-block>
             </tab>
             <tab title="Maven" group-key="maven">
-            <code style="block" lang="XML" interpolate-variables="true">
+            <code-block lang="XML" interpolate-variables="true">
                 <![CDATA[
     <dependencies>
         <dependency>
@@ -159,7 +159,7 @@
         </dependency>
     </dependencies>
                 ]]>
-                </code>
+                </code-block>
             </tab>
         </tabs>
         <p>
@@ -171,68 +171,68 @@
 
     <chapter title="Create an entry point for running an application" id="create-entry-point">
         <p>
-            <a href="running.md">Running</a> a Ktor server using Gradle/Maven depends on the way used to <a href="create_server.xml">create a server</a>.
+            <a href="running.md">Running</a> a Ktor server using Gradle/Maven depends on the way used to <a href="create_server.topic">create a server</a>.
             You can specify the application main class in one of the following ways:
         </p>
         <list>
             <li>
                 <p>
-                    If you use <a href="create_server.xml" anchor="embedded-server">embeddedServer</a>, specify the main class as follows:
+                    If you use <a href="create_server.topic" anchor="embedded-server">embeddedServer</a>, specify the main class as follows:
                 </p>
                 <tabs group="languages">
                     <tab title="Gradle (Kotlin)" group-key="kotlin">
-                        <code style="block" lang="Kotlin">
+                        <code-block lang="Kotlin">
                             application {
                                 mainClass.set("com.example.ApplicationKt")
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Gradle (Groovy)" group-key="groovy">
-                        <code style="block" lang="Groovy">
+                        <code-block lang="Groovy">
                             application {
                                 mainClass = "com.example.ApplicationKt"
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Maven" group-key="maven">
-                        <code style="block" lang="XML" interpolate-variables="true">
+                        <code-block lang="XML" interpolate-variables="true">
                 <![CDATA[
                             <properties>
                                 <main.class>com.example.ApplicationKt</main.class>
                             </properties>
                             ]]>
-                </code>
+                        </code-block>
                     </tab>
                 </tabs>
             </li>
             <li>
                 <p>
-                    If you use <a href="create_server.xml" anchor="engine-main">EngineMain</a>, you need to configure it as the main class.
+                    If you use <a href="create_server.topic" anchor="engine-main">EngineMain</a>, you need to configure it as the main class.
                     For Netty, it will look as follows:
                 </p>
                 <tabs group="languages">
                     <tab title="Gradle (Kotlin)" group-key="kotlin">
-                        <code style="block" lang="Kotlin">
+                        <code-block lang="Kotlin">
                             application {
                                 mainClass.set("io.ktor.server.netty.EngineMain")
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Gradle (Groovy)" group-key="groovy">
-                        <code style="block" lang="Groovy">
+                        <code-block lang="Groovy">
                             application {
                                 mainClass = "io.ktor.server.netty.EngineMain"
                             }
-                        </code>
+                        </code-block>
                     </tab>
                     <tab title="Maven" group-key="maven">
-                        <code style="block" lang="XML" interpolate-variables="true">
+                        <code-block lang="XML" interpolate-variables="true">
                 <![CDATA[
                             <properties>
                                 <main.class>io.ktor.server.netty.EngineMain</main.class>
                             </properties>
                             ]]>
-                </code>
+                        </code-block>
                     </tab>
                 </tabs>
             </li>

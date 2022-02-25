@@ -1,12 +1,12 @@
 [//]: # (title: Session authentication)
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:ktor-server-auth</code>, <code>io.ktor:ktor-server-sessions</code>
 </p>
 <var name="example_name" value="auth-form-session"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 
 [Sessions](sessions.md) provide a mechanism to persist data between different HTTP requests. Typical use cases include storing a logged-in user's ID, the contents of a shopping basket, or keeping user preferences on the client. 
@@ -20,11 +20,11 @@ To enable `session` authentication, you need to include the following artifacts 
 
 * Add the `ktor-server-sessions` dependency for using sessions:
   <var name="artifact_name" value="ktor-server-sessions"/>
-  <include src="lib.xml" include-id="add_ktor_artifact"/>
+  <include from="lib.topic" element-id="add_ktor_artifact"/>
 
 * Add the `ktor-server-auth` dependency for authentication:
   <var name="artifact_name" value="ktor-server-auth"/>
-  <include src="lib.xml" include-id="add_ktor_artifact"/>
+  <include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Session authentication flow {id="flow"}
 

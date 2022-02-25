@@ -1,6 +1,6 @@
 [//]: # (title: SSL and certificates)
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:ktor-network-tls-certificates</code>
 </p>
@@ -9,7 +9,7 @@
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/ssl-engine-main">ssl-engine-main</a>, 
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/ssl-embedded-server">ssl-embedded-server</a>
 </p>
-</microformat>
+</tldr>
 
 In most cases, your Ktor services are placed behind a reverse proxy such as Nginx or Apache. 
 This means that a reverse proxy server handles security concerns, including SSL.
@@ -27,7 +27,7 @@ This might be useful if you need to convert a PEM certificate issued by a certif
 Ktor provides the ability to generate self-signed certificates for testing purposes by calling the [generateCertificate](https://api.ktor.io/ktor-network/ktor-network-tls/ktor-network-tls-certificates/io.ktor.network.tls.certificates/generate-certificate.html) function, which returns a [KeyStore](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/security/KeyStore.html) instance. To use this function, you need to add the `ktor-network-tls-certificates` artifact in the build script:
 
 <var name="artifact_name" value="ktor-network-tls-certificates"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 The code snippet below shows how to generate a certificate and save it to a keystore file:
 

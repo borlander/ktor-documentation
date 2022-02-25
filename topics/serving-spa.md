@@ -3,29 +3,29 @@
 <var name="artifact_name" value="ktor-server-single-page"/>
 <var name="plugin_name" value="SinglePageApplication"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="single-page-application"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 Ktor provides the ability to serve single-page applications, including React, Angular, Vue, and so on.
-</excerpt>
+</link-summary>
 
 Ktor provides the ability to serve single-page applications, including React, Angular, or Vue, using the `%plugin_name%` plugin.
 
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Configure %plugin_name% {id="configure"}

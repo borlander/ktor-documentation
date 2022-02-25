@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE product-profile
-        SYSTEM "https://resources.jetbrains.com/stardust/product-profile.dtd">
-<product-profile id="ktor"
+<!DOCTYPE instance-profile
+        SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/product-profile.dtd">
+<instance-profile id="ktor"
                  name="Ktor"
                  status="eap"
                  start-page="Welcome.md">
@@ -9,9 +9,9 @@
     <toc-element id="Welcome.md"
                  accepts-web-file-names-ref="kotlin_docs"/>
 
-    <toc-element id="ktor-server.xml" accepts-web-file-names="a-ktor-application.html,intro.html,servers-application.html,how-ktor-works.html,lifecycle.html">
+    <toc-element id="ktor-server.topic" accepts-web-file-names="a-ktor-application.html,intro.html,servers-application.html,how-ktor-works.html,lifecycle.html">
         <toc-element toc-title="Getting started with a Ktor Server">
-            <toc-element id="intellij-idea.xml" accepts-web-file-names="getting-started.html"/>
+            <toc-element id="intellij-idea.topic" accepts-web-file-names="getting-started.html"/>
             <toc-element id="creating_http_apis.md"
                          show-structure-depth="2"
                          accepts-web-file-names-ref="tutorials"/>
@@ -28,14 +28,14 @@
         </toc-element>
 
         <toc-element toc-title="Developing applications">
-            <toc-element id="server-dependencies.xml"
+            <toc-element id="server-dependencies.topic"
                          accepts-web-file-names="artifacts.html,maven.html,gradle.html"/>
             <toc-element toc-title="Creating and configuring a server">
-                <toc-element id="create_server.xml"
+                <toc-element id="create_server.topic"
                              show-structure-depth="2"/>
                 <toc-element id="Engines.md"
                              show-structure-depth="2"/>
-                <toc-element id="Configurations.xml"
+                <toc-element id="Configurations.topic"
                              show-structure-depth="2"
                              accepts-web-file-names="configuration.html,environments.html"/>
                 <toc-element id="logging.md"
@@ -43,7 +43,7 @@
                 <toc-element id="Modules.md"/>
                 <toc-element id="Plugins.md" show-structure-depth="2"
                              accepts-web-file-names="zfeatures.html,features.html"/>
-                <toc-element id="development_mode.xml"
+                <toc-element id="development_mode.topic"
                              show-structure-depth="2"/>
                 <toc-element id="ssl.md"
                              show-structure-depth="2"
@@ -162,7 +162,7 @@
         <toc-element toc-title="Running and debugging">
             <toc-element id="running.md" show-structure-depth="2"
                          accepts-web-file-names="engine.html"/>
-            <toc-element id="Auto_reload.xml" accepts-web-file-names="autoreload.html"/>
+            <toc-element id="Auto_reload.topic" accepts-web-file-names="autoreload.html"/>
         </toc-element>
 
         <toc-element id="Testing.md"
@@ -219,9 +219,9 @@
 
 
 
-    <toc-element id="ktor-client.xml">
+    <toc-element id="ktor-client.topic">
         <toc-element toc-title="Getting started with a Ktor Client">
-            <toc-element id="getting_started_ktor_client.xml" show-structure-depth="2" show-structure-for="chapter,procedure"/>
+            <toc-element id="getting_started_ktor_client.topic" show-structure-depth="2" show-structure-for="chapter,procedure"/>
             <toc-element id="getting_started_ktor_client_chat.md" show-structure-depth="2"/>
             <toc-element id="getting_started_ktor_client_multiplatform_mobile.md" show-structure-depth="2"/>
         </toc-element>
@@ -284,7 +284,7 @@
         <toc-element id="migrating-2.md" show-structure-depth="2"/>
     </toc-element>
 
-    <toc-element id="FAQ.xml"
+    <toc-element id="FAQ.topic"
                  accepts-web-file-names="zfaq.html"/>
 
     <toc-element href="https://api.ktor.io"
@@ -303,4 +303,4 @@
     <toc-element hidden="true"
                  accepts-web-file-names="build-from-source.html"
                  target-for-accept-web-file-names="https://github.com/ktorio/ktor/blob/main/CONTRIBUTING.md#building-the-project"/>
-</product-profile>
+</instance-profile>

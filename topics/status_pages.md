@@ -3,28 +3,28 @@
 <var name="plugin_name" value="StatusPages"/>
 <var name="artifact_name" value="ktor-server-status-pages"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="status-pages"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 %plugin_name% allows Ktor applications to respond appropriately to any failure state based on a thrown exception or status code.
-</excerpt>
+</link-summary>
 
 The `%plugin_name%` plugin allows Ktor applications to [respond](responses.md) appropriately to any failure state based on a thrown exception or status code.
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 ## Configure %plugin_name% {id="configure"}
 

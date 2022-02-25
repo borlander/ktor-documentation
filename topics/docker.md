@@ -1,14 +1,14 @@
 [//]: # (title: Docker)
 
-<microformat>
+<tldr>
 <p>
 <control>Initial project</control>: <a href="https://github.com/ktorio/ktor-get-started-sample">ktor-get-started-sample</a>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>
+<link-summary>
 Learn how to deploy a Ktor application to a Docker container, which can then be run either locally or on your cloud provider of choice.
-</excerpt>
+</link-summary>
 
 In this section, we'll see how to deploy a Ktor application to a [Docker](https://www.docker.com) container, which can then be run either locally or on your cloud provider of choice.
 

@@ -4,25 +4,25 @@
 <var name="plugin_name" value="Mustache"/>
 <var name="artifact_name" value="ktor-server-mustache"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="mustache"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 Ktor allows you to use [Mustache templates](https://github.com/spullara/mustache.java) as views within your application by installing the [Mustache](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-mustache/io.ktor.server.mustache/-mustache/index.html) plugin.
 
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install Mustache {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 Inside the `install` block, you can [configure](#template_loading) the [MustacheFactory][mustache_factory] for loading Mustache templates.
 

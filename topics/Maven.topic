@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/stardust/html-entities.dtd">
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
 
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/topic.v2.xsd"
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        title="Adding Ktor to an existing Maven project"
        id="Maven">
 
-    <microformat>
+    <tldr>
         <p>
             <control>Final project</control>: <a href="https://github.com/ktorio/ktor-maven-sample/tree/main">ktor-maven-sample</a>
         </p>
-    </microformat>
+    </tldr>
 
     <p>
         In this tutorial, we'll show you how to integrate Ktor into the existing Maven project.
@@ -47,9 +47,9 @@
             <a href="https://www.jetbrains.com/help/idea/run-for-the-first-time.html">open IntelliJ IDEA</a>, and follow
             the steps below:
         </p>
-        <procedure hide-from-structure="true">
+        <procedure>
             <step>
-                <include src="lib.xml" include-id="new_project_idea"/>
+                <include from="lib.topic" element-id="new_project_idea"/>
             </step>
             <step>
                 <p>
@@ -99,12 +99,12 @@
         <p>
             After <a anchor="create-new-maven-project">creating an empty project</a>, we are ready to examine a Maven configuration file and add Ktor dependencies to it:
         </p>
-        <procedure hide-from-structure="true">
+        <procedure>
             <step>
                 <p>
                     Open the <path>pom.xml</path> file. It should look something like this:
                 </p>
-                <code style="block" lang="XML"
+                <code-block lang="XML"
                       src="snippets/_misc/maven-initial.pom.xml"
                       interpolate-variables="true"/>
                 <p>
@@ -137,7 +137,7 @@
                 <p>
                     The <code>properties</code> and <code>dependencies</code> blocks might look as follows:
                 </p>
-                <code style="block" lang="XML"
+                <code-block lang="XML"
                       src="snippets/_misc/maven-ktor.pom.xml"
                       interpolate-variables="true"/>
                 <p>
@@ -149,7 +149,7 @@
                 <p>
                     The resulting <path>pom.xml</path> file should look as shown below.
                 </p>
-                <code style="block" lang="XML"
+                <code-block lang="XML"
                       src="snippets/_misc/maven-final.pom.xml"
                       interpolate-variables="true"/>
                 <tip>
@@ -162,7 +162,7 @@
     </chapter>
 
 
-    <include src="server-dependencies.xml" include-id="create-server"/>
+    <include from="server-dependencies.topic" element-id="create-server"/>
 
 
     <chapter title="Run an application" id="run-app">

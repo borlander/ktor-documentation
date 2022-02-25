@@ -1,14 +1,14 @@
 [//]: # (title: Authentication and authorization)
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:ktor-client-auth</code>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>
+<link-summary>
 The Auth plugin handles authentication and authorization in your client application.
-</excerpt>
+</link-summary>
 
 Ktor provides the `Auth` plugin to handle authentication and authorization in your client application. 
 Typical usage scenarios include logging in users and gaining access to specific resources. 
@@ -27,7 +27,7 @@ HTTP provides a [general framework](https://developer.mozilla.org/en-US/docs/Web
 To enable authentication, you need to include the `ktor-client-auth` artifact in the build script:
 
 <var name="artifact_name" value="ktor-client-auth"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 
 ## Install Auth {id="install_plugin"}

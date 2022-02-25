@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/stardust/html-entities.dtd">
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
 
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/topic.v2.xsd"
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        title="Creating a server"
-       id="create_server" auxiliary-id="start_server">
+       id="create_server" help-id="start_server">
 
-    <microformat>
+    <tldr>
         <p>
             <b>Code examples</b>:
             <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/embedded-server">embedded-server</a>,
             <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/engine-main">engine-main</a>
         </p>
-    </microformat>
+    </tldr>
 
-    <excerpt>
+    <link-summary>
         Choose how to create a Ktor server - using the 'embeddedServer' function to configure parameters in code or using 'EngineMain' to load server configuration from an external file that uses the HOCON format.
-    </excerpt>
+    </link-summary>
 
     <p>
         To run a Ktor server application, you need to create a server first.
@@ -57,7 +57,7 @@
 
     <chapter title="EngineMain" id="engine-main">
         <p>
-            <code>EngineMain</code> starts a server with the selected engine and loads the <a href="Modules.md">application module</a> specified in the external <a href="Configurations.xml" anchor="hocon-file">application.conf</a> file. Besides modules to load, this file can include various server parameters (the <code>8080</code> port in the example below).
+            <code>EngineMain</code> starts a server with the selected engine and loads the <a href="Modules.md">application module</a> specified in the external <a href="Configurations.topic" anchor="hocon-file">application.conf</a> file. Besides modules to load, this file can include various server parameters (the <code>8080</code> port in the example below).
         </p>
 
         <tabs>

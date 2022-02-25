@@ -2,7 +2,7 @@
 
 <var name="artifact_name" value="ktor-server-auth"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
@@ -12,7 +12,7 @@
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/auth-form-html-dsl">auth-form-html-dsl</a>,
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/auth-form-session">auth-form-session</a>
 </p>
-</microformat>
+</tldr>
 
 Form-based authentication uses a [web form](https://developer.mozilla.org/en-US/docs/Learn/Forms) to collect credential information and authenticate a user.
 
@@ -22,7 +22,7 @@ Form-based authentication uses a [web form](https://developer.mozilla.org/en-US/
 ## Add dependencies {id="add_dependencies"}
 To enable `form` authentication, you need to include the `%artifact_name%` artifact in the build script:
 
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Form-based authentication flow {id="flow"}
 

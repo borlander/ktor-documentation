@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/stardust/html-entities.dtd">
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
 
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/topic.v2.xsd"
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        title="Creating a new Ktor project"
        id="intellij-idea">
 
-    <microformat>
+    <tldr>
         <p>
             <control>Final project</control>: <a href="https://github.com/ktorio/ktor-get-started-sample">ktor-get-started-sample</a>
         </p>
-    </microformat>
+    </tldr>
 
-    <excerpt>This guide shows how to create, run, and test a simple Ktor application.</excerpt>
+    <link-summary>This guide shows how to create, run, and test a simple Ktor application.</link-summary>
 
     <p>
         Ktor is an asynchronous framework for creating microservices, web applications, and more.
@@ -22,7 +22,7 @@
 
 
     <chapter title="Prerequisites" id="prerequisites">
-        <include src="lib.xml" include-id="plugin_prerequisites"/>
+        <include from="lib.topic" element-id="plugin_prerequisites"/>
     </chapter>
 
 
@@ -38,7 +38,7 @@
         </p>
         <procedure>
             <step>
-                <include src="lib.xml" include-id="new_project_idea"/>
+                <include from="lib.topic" element-id="new_project_idea"/>
             </step>
             <step>
                 <p>
@@ -66,7 +66,7 @@
                     <li>
                         <p>
                             <control>Build System</control>:
-                            Choose the desired <a href="server-dependencies.xml">build system</a>.
+                            Choose the desired <a href="server-dependencies.topic">build system</a>.
                             This can be <emphasis>Gradle</emphasis> with Kotlin or Groovy DSL, or <emphasis>Maven</emphasis>.
                         </p>
                     </li>
@@ -97,7 +97,7 @@
                     <li>
                         <p>
                             <control>Configuration in</control>:
-                            Choose whether to specify server parameters <a href="create_server.xml">in code or in a HOCON file</a>.
+                            Choose whether to specify server parameters <a href="create_server.topic">in code or in a HOCON file</a>.
                         </p>
                     </li>
                     <li>
@@ -154,7 +154,7 @@
                 <p>
                     The <path>Application.kt</path> file has the following code added automatically:
                 </p>
-<!--                <code style="block" lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun main">
+<!--                <code-block lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun main">
 <![CDATA[
                     package com.example
 
@@ -169,7 +169,7 @@
                     }
                     ]]>
                 </code>-->
-                <code style="block" lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun main" src="https://raw.githubusercontent.com/ktorio/ktor-get-started/main/src/main/kotlin/com/example/Application.kt"/>
+                <code-block lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun main" src="https://raw.githubusercontent.com/ktorio/ktor-get-started/main/src/main/kotlin/com/example/Application.kt"/>
 
                 <p>
                     The main parts of this code are:
@@ -177,15 +177,15 @@
                 <list>
                     <li>
                         <p>
-                            The <a href="create_server.xml" anchor="embedded-server">embeddedServer</a> function is used to configure server parameters in code and run an application.
+                            The <a href="create_server.topic" anchor="embedded-server">embeddedServer</a> function is used to configure server parameters in code and run an application.
                         </p>
                     </li>
                     <li>
                         <p>
                             <code>configureRouting</code> is an extension function that defines <a href="Routing_in_Ktor.md">routing</a>. This function is declared in a separate <code>plugins</code> package (the <path>Routing.kt</path> file).
                         </p>
-                        <code style="block" lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun Application.configureRouting" src="https://raw.githubusercontent.com/ktorio/ktor-get-started/main/src/main/kotlin/com/example/plugins/Routing.kt"/>
-<!--                        <code style="block" lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun Application.configureRouting">
+                        <code-block lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun Application.configureRouting" src="https://raw.githubusercontent.com/ktorio/ktor-get-started/main/src/main/kotlin/com/example/plugins/Routing.kt"/>
+<!--                        <code-block lang="kotlin" initial-collapse-state="expanded" collapsed-title="fun Application.configureRouting">
 <![CDATA[
                             package com.example.plugins
                             // ...

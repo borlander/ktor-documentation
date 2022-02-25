@@ -1,14 +1,14 @@
 [//]: # (title: Creating a WebSocket chat)
 
-<microformat>
+<tldr>
 <var name="example_name" value="tutorial-websockets-server"/>
-<include src="lib.xml" include-id="download_example"/>
+<include from="lib.topic" element-id="download_example"/>
 <p>
 <b>Used plugins</b>: <a href="Routing_in_Ktor.md">Routing</a>, <a href="websocket.md">WebSockets</a>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>In this tutorial, you will learn how to create a simple chat application that uses WebSockets.</excerpt>
+<link-summary>In this tutorial, you will learn how to create a simple chat application that uses WebSockets.</link-summary>
 
 In this tutorial, you will learn how to create a simple chat application that uses WebSockets.
 
@@ -35,14 +35,14 @@ Now that we have confidence in the technology we want to use for the implementat
 
 
 ## Prerequisites {id="prerequisites"}
-<include src="lib.xml" include-id="plugin_prerequisites"/>
+<include from="lib.topic" element-id="plugin_prerequisites"/>
 
 
 ## Create a new Ktor project {id="create_ktor_project"}
 
 To create a base project for our application using the Ktor plugin, [open IntelliJ IDEA](https://www.jetbrains.com/help/idea/run-for-the-first-time.html) and follow the steps below:
 
-1. <include src="lib.xml" include-id="new_project_idea"/>
+1. <include from="lib.topic" element-id="new_project_idea"/>
 2. In the **New Project** wizard, choose **Ktor** from the list on the left. On the right pane, specify the following settings:
    ![New Ktor project](tutorial_websockets_server_new_project.png){width="744"}
    * **Name**: Specify a project name.

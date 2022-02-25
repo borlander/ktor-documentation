@@ -1,6 +1,6 @@
 [//]: # (title: Creating and configuring a client)
 
-<excerpt>Learn how to create and configure the Ktor client.</excerpt>
+<link-summary>Learn how to create and configure the Ktor client.</link-summary>
 
 To instantiate the client, create the [HttpClient](https://api.ktor.io/ktor-client/ktor-client-core/io.ktor.client/-http-client/index.html) class instance and pass an engine as a parameter:
 

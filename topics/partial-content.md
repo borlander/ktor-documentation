@@ -3,7 +3,7 @@
 <var name="artifact_name" value="ktor-server-partial-content"/>
 <var name="plugin_name" value="PartialContent"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
@@ -15,7 +15,7 @@
 <b>Client example</b>:
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/client-download-file-range">client-download-file-range</a>
 </p>
-</microformat>
+</tldr>
 
 The `%plugin_name%` plugin adds support for handling [HTTP range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) used to send only a portion of an HTTP message back to a client. This plugin is useful for streaming content or resuming partial downloads.
 
@@ -27,11 +27,11 @@ The `%plugin_name%` plugin adds support for handling [HTTP range requests](https
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 To learn how to use `%plugin_name%` to serve a file using HTTP range requests, see the [](responses.md#file) section.

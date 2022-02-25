@@ -1,9 +1,9 @@
 [//]: # (title: Intercepting requests using HttpSend)
 
-<microformat>
+<tldr>
 <var name="example_name" value="client-http-send"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 
 The `HttpSend` plugin allows you to monitor and retry HTTP calls depending on a response. For instance, you can implement call logging or retry a request if a server returns an error response (with the 4xx or 5xx status code).

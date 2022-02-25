@@ -1,14 +1,14 @@
 [//]: # (title: Testing)
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:ktor-server-test-host</code>, <code>org.jetbrains.kotlin:kotlin-test</code>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>
+<link-summary>
 Learn how to test server Ktor applications using a special testing engine.
-</excerpt>
+</link-summary>
 
 Ktor provides a special testing engine that doesn't create a web server, doesn't bind to sockets, and doesn't make any real HTTP requests. Instead, it hooks directly into internal mechanisms and processes an application call directly. This results in quicker tests execution compared to running a complete web server for testing. 
 
@@ -17,13 +17,13 @@ Ktor provides a special testing engine that doesn't create a web server, doesn't
 To test a server Ktor application, you need to include the following artifacts in the build script:
 * Add the `ktor-server-test-host` dependency:
    <var name="artifact_name" value="ktor-server-test-host"/>
-   <include src="lib.xml" include-id="add_ktor_artifact_testing"/>
+   <include from="lib.topic" element-id="add_ktor_artifact_testing"/>
 
 * Add the `kotlin-test` dependency providing a set of utility functions for performing assertions in tests:
   <var name="group_id" value="org.jetbrains.kotlin"/>
   <var name="artifact_name" value="kotlin-test"/>
   <var name="version" value="kotlin_version"/>
-  <include src="lib.xml" include-id="add_artifact_testing"/>
+  <include from="lib.topic" element-id="add_artifact_testing"/>
 
   
 

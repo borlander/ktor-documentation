@@ -3,17 +3,17 @@
 <var name="plugin_name" value="Webjars"/>
 <var name="artifact_name" value="ktor-server-webjars"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="webjars"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 The %plugin_name% plugin enables serving the client-side libraries provided by WebJars.
-</excerpt>
+</link-summary>
 
 
 The `%plugin_name%` plugin enables serving the client-side libraries provided by [WebJars](https://www.webjars.org/). It allows you to package your assets such as JavaScript and CSS libraries as part of your [fat JAR](fatjar.md).
@@ -21,18 +21,18 @@ The `%plugin_name%` plugin enables serving the client-side libraries provided by
 ## Add dependencies {id="add_dependencies"}
 To enable `%plugin_name%`, you need to include the following artifacts in the build script:
 * Add the `%artifact_name%` dependency:
-  <include src="lib.xml" include-id="add_ktor_artifact"/>
+  <include from="lib.topic" element-id="add_ktor_artifact"/>
 
 * Add a dependency for a required client-side library. The example below shows how to add a Bootstrap artifact:
   <var name="group_id" value="org.webjars"/>
   <var name="artifact_name" value="bootstrap"/>
   <var name="version" value="bootstrap_version"/>
-  <include src="lib.xml" include-id="add_artifact"/>
+  <include from="lib.topic" element-id="add_artifact"/>
   You can replace `bootstrap_version` with the required version of the `bootstrap` artifact, for example, `%bootstrap_version%`.
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Configure %plugin_name% {id="configure"}

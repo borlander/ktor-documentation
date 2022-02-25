@@ -3,17 +3,17 @@
 <var name="plugin_name" value="XHttpMethodOverride"/>
 <var name="artifact_name" value="ktor-server-method-override"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="json-kotlinx-method-override"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 %plugin_name% enables the capability to tunnel HTTP verbs inside the X-HTTP-Method-Override header.
-</excerpt>
+</link-summary>
 
 The `%plugin_name%` plugin enables the capability to tunnel HTTP verbs inside the `X-HTTP-Method-Override` header.
 This might be useful if your server API handles multiple HTTP verbs (`GET`, `PUT`, `POST`, `DELETE`, and so on), but the client can only use a limited set of verbs (for example, `GET` and `POST`) due to specific limitations.
@@ -22,12 +22,12 @@ For instance, if the client sends a request with the `X-Http-Method-Override` he
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Configure %plugin_name% {id="configure"}

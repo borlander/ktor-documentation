@@ -1,13 +1,13 @@
 [//]: # (title: Logging)
 
-<microformat>
+<tldr>
 <var name="example_name" value="logging"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 Ktor uses SLF4J API as a facade for various logging frameworks (for example, Logback or Log4j) and allows you to log application events.
-</excerpt>
+</link-summary>
 
 Ktor uses [SLF4J API](http://www.slf4j.org/) as a facade for various logging frameworks (for example, [Logback](https://logback.qos.ch/) or [Log4j](https://logging.apache.org/log4j)) and allows you to log application events. 
 To enable logging, you need to add [dependencies](#add_dependencies) for the desired framework and provide [configuration](#configure-logger) specific for this framework.
@@ -22,7 +22,7 @@ For example, Logback requires the following dependency:
 <var name="group_id" value="ch.qos.logback"/>
 <var name="artifact_name" value="logback-classic"/>
 <var name="version" value="logback_version"/>
-<include src="lib.xml" include-id="add_artifact"/>
+<include from="lib.topic" element-id="add_artifact"/>
 
 To use Log4j, you need to add the `org.apache.logging.log4j:log4j-core` and `org.apache.logging.log4j:log4j-slf4j-impl` artifacts.
 

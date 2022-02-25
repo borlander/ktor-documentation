@@ -1,8 +1,8 @@
 [//]: # (title: Running)
 
-<excerpt>
+<link-summary>
 Learn how to run a server Ktor application.
-</excerpt>
+</link-summary>
 
 When running a Ktor server application, take into account the following specifics:
 * The way used to [create a server](create_server.xml) affects whether you can override server parameters by passing command-line arguments when running a [packaged Ktor application](#package).
@@ -97,5 +97,5 @@ Running a Ktor application from the resulting package depends on the package typ
    java -jar sample-app.jar -port=8080
    ```
 * To run an application packaged using the Gradle [Application](gradle-application-plugin.md) plugin, run a corresponding executable:
-   <include src="gradle-application-plugin.md" include-id="run_executable"/>
+   <include from="gradle-application-plugin.md" element-id="run_executable"/>
 * To run a servlet Ktor application, use the `run` task of the [Gretty](war.md#run) plugin.

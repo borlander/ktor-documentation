@@ -1,31 +1,31 @@
 [//]: # (title: Creating a WebSocket chat client)
 
-<microformat>
+<tldr>
 <var name="example_name" value="tutorial-websockets-client"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 Learn how to create a client chat application that uses WebSockets.
-</excerpt>
+</link-summary>
 
 In this tutorial, we will learn how to create a client chat application that uses WebSockets. The client application will allow users to join a common chat server, send messages to other users, and see messages from other users in the terminal.
 
 To learn how to create a chat server, see the [](creating_web_socket_chat.md) tutorial.
 
 ## Prerequisites {id="prerequisites"}
-<include src="lib.xml" include-id="client_prerequisites"/>
+<include from="lib.topic" element-id="client_prerequisites"/>
 
 ## Create a new project {id="new-project"}
 
 To create a WebSocket chat client, we need to create a new project first. [Open IntelliJ IDEA](https://www.jetbrains.com/help/idea/run-for-the-first-time.html) and follow
 the steps below:
 
-1. <include src="lib.xml" include-id="new_project_idea"/>
+1. <include from="lib.topic" element-id="new_project_idea"/>
 2. In the **New Project** wizard, choose **kotlin** from the list on the left. On the right pane, specify the following settings:
    ![Kotlin Project Settings](tutorial_websockets_client_new_project.png){width="706"}
    
-   <include src="getting_started_ktor_client.xml" include-id="kotlin_app_settings"/>
+   <include from="getting_started_ktor_client.topic" element-id="kotlin_app_settings"/>
 
    Click **Next**.
 
@@ -70,7 +70,7 @@ In the `build.gradle.kts` file, add the `JavaExec` task and specify `standardInp
    ```
    {interpolate-variables="true"}
 
-   <include src="getting_started_ktor_client.xml" include-id="eap-note"/>
+   <include from="getting_started_ktor_client.topic" element-id="eap-note"/>
 
 3. Open the `build.gradle.kts` file and add the following artifacts to the `dependencies` block:
    ```kotlin

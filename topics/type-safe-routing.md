@@ -3,15 +3,15 @@
 <var name="plugin_name" value="Resources"/>
 <var name="artifact_name" value="ktor-server-resources"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="resource-routing"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>Ktor provides the Resources plugin that allows you to implement type-safe routing.</excerpt>
+<link-summary>Ktor provides the Resources plugin that allows you to implement type-safe routing.</link-summary>
 
 Ktor provides the `%plugin_name%` plugin that allows you to implement type-safe [routing](Routing_in_Ktor.md). To accomplish this, you need to create a class that should act as a typed route and then annotate this class using the `@Resource` keyword. Such classes should also have the `@Serializable` annotation provided by the kotlinx.serialization library.
 
@@ -26,13 +26,13 @@ Given that [resource classes](#resource_classes) should have the `@Serializable`
 
 ### Add %plugin_name% dependencies {id="add_plugin_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Create resource classes {id="resource_classes"}

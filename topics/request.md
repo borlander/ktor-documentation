@@ -1,8 +1,8 @@
 [//]: # (title: Making requests)
 
-<excerpt>
+<link-summary>
 Learn how to make requests and specify various request parameters: a request URL, an HTTP method, headers, and the body of a request.
-</excerpt>
+</link-summary>
 
 After [setting up the client](create-client.md), you can make HTTP requests. The main way for making HTTP requests is the [request](https://api.ktor.io/ktor-client/ktor-client-core/io.ktor.client.request/request.html) function that can take a URL as a parameter. Inside this function, you can configure various request parameters: 
 * Specify a request URL.

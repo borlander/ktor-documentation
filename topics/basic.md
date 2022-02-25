@@ -2,14 +2,14 @@
 
 <var name="artifact_name" value="ktor-server-auth"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <p>
 <b>Code examples</b>: <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/auth-basic">auth-basic</a>, <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/auth-basic-hash-table">auth-basic-hash-table</a>
 </p>
-</microformat>
+</tldr>
 
 The Basic authentication scheme is a part of [HTTP framework](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) used for access control and authentication. In this scheme, user credentials are transmitted as username/password pairs encoded using Base64.
 
@@ -20,7 +20,7 @@ Ktor allows you to use basic authentication for logging in users and protecting 
 ## Add dependencies {id="add_dependencies"}
 To enable `basic` authentication, you need to include the `%artifact_name%` artifact in the build script:
 
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Basic authentication flow {id="flow"}
 

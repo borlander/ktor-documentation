@@ -1,8 +1,8 @@
 [//]: # (title: Plugins)
 
-<excerpt>
+<link-summary>
 Get acquainted with plugins that provide common functionality, for example, serialization and content encoding, compression, headers, cookie support, etc.
-</excerpt>
+</link-summary>
 
 A typical request/response pipeline in Ktor looks like the following:
 
@@ -47,11 +47,11 @@ In fact, what we've been calling `routing` until now, is nothing more than a Plu
 ## Add Plugin dependency {id="dependency"}
 Most of the plugins require a specific dependency. For example, the `CORS` plugin requires adding the `ktor-server-cors` artifact in the build script:
 <var name="artifact_name" value="ktor-server-cors"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 As an alternative, you can use the `ktor-server` artifact containing all Ktor server plugins:
 <var name="artifact_name" value="ktor-server"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install Plugins {id="install"}
 

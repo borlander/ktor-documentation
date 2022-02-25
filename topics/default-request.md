@@ -1,13 +1,13 @@
 [//]: # (title: Default request)
 
-<microformat>
+<tldr>
 <var name="example_name" value="client-default-request"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 The DefaultRequest plugin allows you to configure default parameters for all requests.
-</excerpt>
+</link-summary>
 
 The `DefaultRequest` plugin allows you to configure default parameters for all [requests](request.md): specify a base URL, add headers, and so on.
 

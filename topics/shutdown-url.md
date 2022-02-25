@@ -1,9 +1,9 @@
 [//]: # (title: Shutdown URL)
 
-<microformat>
+<tldr>
 <var name="example_name" value="shutdown-url"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 The `ShutDownUrl` plugin allows you to configure a URL used to shut down the server. 
 There are two ways to enable this plugin: 

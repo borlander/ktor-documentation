@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/stardust/html-entities.dtd">
+<!DOCTYPE topic SYSTEM "https://helpserver.labs.jb.gg/help/schemas/mvp/html-entities.dtd">
 
-<topic xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/stardust/topic.v2.xsd"
+<topic xsi:noNamespaceSchemaLocation="https://helpserver.labs.jb.gg/help/schemas/mvp/topic.v2.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        title="Creating a client application"
        id="getting_started_ktor_client">
 
-    <microformat>
+    <tldr>
         <var name="example_name" value="tutorial-client-get-started"/>
-        <include src="lib.xml" include-id="download_example"/>
-    </microformat>
+        <include from="lib.topic" element-id="download_example"/>
+    </tldr>
 
-    <excerpt>
+    <link-summary>
         Create your first client application for sending a request and receiving a response.
-    </excerpt>
+    </link-summary>
 
     <p>
         Ktor includes a multiplatform asynchronous HTTP client, which allows you to make requests and handle responses, extend its functionality with <a href="http-client_plugins.md">plugins</a>, such as authentication, JSON serialization, and so on.
@@ -21,7 +21,7 @@
     </p>
 
     <chapter title="Prerequisites" id="prerequisites">
-        <include src="lib.xml" include-id="client_prerequisites"/>
+        <include from="lib.topic" element-id="client_prerequisites"/>
     </chapter>
 
     <chapter title="Create a new project" id="new-project">
@@ -30,9 +30,9 @@
             <a href="https://www.jetbrains.com/help/idea/run-for-the-first-time.html">Open IntelliJ IDEA</a>, and follow
             the steps below:
         </p>
-        <procedure hide-from-structure="true">
+        <procedure>
             <step>
-                <include src="lib.xml" include-id="new_project_idea"/>
+                <include from="lib.topic" element-id="new_project_idea"/>
             </step>
             <step>
                 <p>
@@ -100,13 +100,13 @@
                 <p>
                     Open the <path>build.gradle.kts</path> file and apply the <code>application</code> plugin in the <code>plugins</code> block:
                 </p>
-                <code style="block" lang="kotlin" src="snippets/tutorial-client-get-started/build.gradle.kts" lines="3-4,6"/>
+                <code-block lang="kotlin" src="snippets/tutorial-client-get-started/build.gradle.kts" include-lines="3-4,6"/>
             </step>
             <step>
                 <p>
                     Specify the application's main class:
                 </p>
-                <code style="block" lang="kotlin" src="snippets/tutorial-client-get-started/build.gradle.kts" lines="8-10"/>
+                <code-block lang="kotlin" src="snippets/tutorial-client-get-started/build.gradle.kts" include-lines="8-10"/>
                 <p>
                     We'll create the <path>Application.kt</path> file <a anchor="create-kotlin-file">later</a>.
                 </p>
@@ -117,12 +117,12 @@
                 <p>
                     Open the <path>gradle.properties</path> file and add the following line to specify the Ktor version:
                 </p>
-                <code style="block" lang="kotlin" interpolate-variables="true">
+                <code-block lang="kotlin" interpolate-variables="true">
                     ktor_version=%ktor_version%
-                </code>
+                </code-block>
                 <note id="eap-note">
                     <p>
-                        To use the EAP version of Ktor, you need to add a <a href="server-dependencies.xml" anchor="repositories">Space repository</a>.
+                        To use the EAP version of Ktor, you need to add a <a href="server-dependencies.topic" anchor="repositories">Space repository</a>.
                     </p>
                 </note>
             </step>
@@ -130,7 +130,7 @@
                 <p>
                     Open the <path>build.gradle.kts</path> file and add the following artifacts to the dependencies block:
                 </p>
-                <code style="block" lang="kotlin" src="snippets/tutorial-client-get-started/build.gradle.kts" lines="1-2,17-20"/>
+                <code-block lang="kotlin" src="snippets/tutorial-client-get-started/build.gradle.kts" include-lines="1-2,17-20"/>
 
                 <p>
                     <code>ktor-client-core</code> is a core dependency that provides the main client functionality, while <code>ktor-client-cio</code> is a dependency for an <a href="http-client_engines.md">engine</a> processing network requests.
@@ -151,7 +151,7 @@
         <p>
             Now we are ready to create a client.
         </p>
-        <procedure hide-from-structure="true">
+        <procedure>
             <step>
                 <p>
                     Invoke the <a href="https://www.jetbrains.com/help/idea/project-tool-window.html">Project view</a> and expand the <path>src/main</path> folder.
@@ -160,7 +160,7 @@
             </step>
             <step>
                 <p>
-                    Right-click the <path>kotlin</path> folder and choose <menupath>New | Kotlin Class/File</menupath>.
+                    Right-click the <path>kotlin</path> folder and choose <ui-path>New | Kotlin Class/File</ui-path>.
                 </p>
                 <img src="client_get_started_project_view_kotlin.png" alt="Project view" width="499"/>
             </step>
@@ -182,19 +182,19 @@
         <p>
             Now we can add a client's code to the <a anchor="create-kotlin-file">created Kotlin file</a>.
         </p>
-        <procedure hide-from-structure="true">
+        <procedure>
             <step>
                 <p>
                     Add the following code to the <path>Application.kt</path> file:
                 </p>
-                <code style="block" lang="kotlin">
+                <code-block lang="kotlin">
                     import io.ktor.client.*
                     import io.ktor.client.engine.cio.*
 
                     fun main() {
                         val client = HttpClient(CIO)
                     }
-                </code>
+                </code-block>
                 <p>
                     A client is represented by the <a href="https://api.ktor.io/ktor-client/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a> class.
                 </p>
@@ -204,7 +204,7 @@
                     To <a href="request.md">make a request</a> to a specific URL, we need to call a client's method corresponding to an HTTP verb, for example, <code>HttpClient.get</code>.
                     A <a href="response.md">response</a> will be received as a <code>HttpResponse</code> class object.
                 </p>
-                <code style="block" lang="kotlin">
+                <code-block lang="kotlin">
                     import io.ktor.client.*
                     import io.ktor.client.engine.cio.*
                     import io.ktor.client.request.*
@@ -214,7 +214,7 @@
                         val client = HttpClient(CIO)
                         val response: HttpResponse = client.get("https://ktor.io/")
                     }
-                </code>
+                </code-block>
             </step>
             <step>
                 <p>
@@ -252,7 +252,7 @@
         <p>
             Now we are ready to run our program a make a request.
         </p>
-        <procedure hide-from-structure="true">
+        <procedure>
             <step>
                 <p>
                     Click the gutter icon next to the <code>main</code> function and choose <control>Run 'ApplicationKt'</control>.

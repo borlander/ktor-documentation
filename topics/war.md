@@ -1,17 +1,17 @@
 [//]: # (title: WAR)
 
-<microformat>
+<tldr>
 <p>
 <b>Code examples</b>: 
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/jetty-war">jetty-war</a>, 
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/tomcat-war">tomcat-war</a>,
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/tomcat-war-ssl">tomcat-war-ssl</a>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>
+<link-summary>
 Learn how to run and deploy a Ktor application inside a servlet container using a WAR archive.
-</excerpt>
+</link-summary>
 
 A Ktor application can be run and deployed inside servlet containers that include Tomcat and Jetty. To deploy inside a servlet container, you need to generate a WAR archive and then deploy it to a server or a cloud service that supports WARs.
 
@@ -40,7 +40,7 @@ In contrast to the approach above, a servlet container should control the applic
 
 To use Ktor in a servlet application, you need to include the `ktor-server-servlet` artifact in the build script:
 <var name="artifact_name" value="ktor-server-servlet"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 Note that you don't need the separate [Jetty or Tomcat artifacts](Engines.md#dependencies) when a Ktor application is deployed inside a servlet container.
 
@@ -50,13 +50,13 @@ To register a Ktor servlet in your application, open the `WEB-INF/web.xml` file 
 
 ```xml
 ```
-{src="snippets/jetty-war/src/main/webapp/WEB-INF/web.xml" lines="7-16"}
+{src="snippets/jetty-war/src/main/webapp/WEB-INF/web.topic" lines="7-16"}
 
 Then, configure the URL pattern for this servlet:
 
 ```xml
 ```
-{src="snippets/jetty-war/src/main/webapp/WEB-INF/web.xml" lines="18-21"}
+{src="snippets/jetty-war/src/main/webapp/WEB-INF/web.topic" lines="18-21"}
 
 
 

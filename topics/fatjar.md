@@ -1,15 +1,15 @@
 [//]: # (title: Gradle Shadow plugin)
 
-<microformat>
+<tldr>
 <p>
 <control>Initial project</control>: <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/engine-main">engine-main</a>
 </p>
 <p>
 <control>Final project</control>: <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/fatjar">fatjar</a>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>Learn how to create an executable Fat JAR using the Gradle Shadow plugin.</excerpt>
+<link-summary>Learn how to create an executable Fat JAR using the Gradle Shadow plugin.</link-summary>
 
 The Gradle [Shadow](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow) plugin allows you to create an executable JAR that includes all code dependencies (fat JAR). In this topic, we'll show you how to generate and run a fat JAR for the [engine-main](https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/engine-main) sample project.
 
@@ -68,10 +68,10 @@ For the [fatjar](https://github.com/ktorio/ktor-documentation/tree/%current-bran
 
 <tabs group="os">
 <tab title="Linux/MacOS" group-key="unix">
-<code style="block" lang="Bash">./gradlew :fatjar:shadowJar</code>
+<code-block lang="Bash">./gradlew :fatjar:shadowJar</code-block>
 </tab>
 <tab title="Windows" group-key="windows">
-<code style="block" lang="CMD">gradlew.bat :fatjar:shadowJar</code>
+<code-block lang="CMD">gradlew.bat :fatjar:shadowJar</code-block>
 </tab>
 </tabs>
 

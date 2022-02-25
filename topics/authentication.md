@@ -3,15 +3,15 @@
 <var name="plugin_name" value="Authentication"/>
 <var name="artifact_name" value="ktor-server-auth"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
-</microformat>
+</tldr>
 
-<excerpt>
+<link-summary>
 The Authentication plugin handles authentication and authorization in Ktor: logging in users, granting access to specific resources, etc.
-</excerpt>
+</link-summary>
 
 Ktor provides the `Authentication` plugin to handle authentication and authorization. Typical usage scenarios include logging in users, granting access to specific resources, and securely transmitting information between parties. You can also use `Authentication` with [Sessions](sessions.md) to keep a user's information between requests.
 
@@ -45,8 +45,8 @@ HTTP provides a [general framework](https://developer.mozilla.org/en-US/docs/Web
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 Note that some authentication providers, such as [JWT](jwt.md) and [LDAP](ldap.md), require additional artifacts.
 
@@ -54,7 +54,7 @@ Note that some authentication providers, such as [JWT](jwt.md) and [LDAP](ldap.m
 
 ## Install Authentication {id="install"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Configure Authentication {id="configure"}

@@ -3,17 +3,17 @@
 <var name="plugin_name" value="Resources"/>
 <var name="artifact_name" value="ktor-client-resources"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="client-type-safe-requests"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 Learn how to make type-safe requests using the Resources plugin.
-</excerpt>
+</link-summary>
 
 Ktor provides the `%plugin_name%` plugin that allows you to implement type-safe [requests](request.md). To accomplish this, you need to create a class that describes resources available on a server and then annotate this class using the `@Resource` keyword. Such classes should also have the `@Serializable` annotation provided by the kotlinx.serialization library.
 
@@ -28,8 +28,8 @@ Given that [resource classes](#resource_classes) should have the `@Serializable`
 
 ### Add %plugin_name% dependencies {id="add_plugin_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 
 ## Install %plugin_name% {id="install_plugin"}
@@ -44,7 +44,7 @@ val client = HttpClient(CIO) {
 
 ## Create resource classes {id="resource_classes"}
 
-<include src="type-safe-routing.md" include-id="resource_classes_server"/>
+<include from="type-safe-routing.md" element-id="resource_classes_server"/>
 
 
 ### Example: A resource for CRUD operations {id="example_crud"}

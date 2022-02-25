@@ -3,17 +3,17 @@
 <var name="plugin_name" value="WebSockets"/>
 <var name="artifact_name" value="ktor-server-websockets"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="server-websockets"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 Ktor supports the WebSocket protocol and allows you to create applications that require real-time data transfer from and to the server.
-</excerpt>
+</link-summary>
 
 Ktor supports the WebSocket protocol and allows you to create applications that require real-time data transfer from and to the server. For example, WebSockets can be used to create a [chat application](creating_web_socket_chat.md).
 
@@ -27,13 +27,13 @@ Ktor allows you to:
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 
 ## Install WebSockets {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Configure WebSockets settings {id="configure"}

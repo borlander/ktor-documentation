@@ -3,13 +3,13 @@
 <var name="artifact_name" value="ktor-server-call-id"/>
 <var name="plugin_name" value="CallId"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="call-id"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 The `%plugin_name%` plugin allows you to trace client requests end-to-end by using unique request IDs or call IDs. Typically, working with a call ID in Ktor might look as follows:
 1. First, you need to obtain a call ID for a specific request in one of the following ways:
@@ -23,12 +23,12 @@ Using `%plugin_name%` along with [CallLogging](call-logging.md) helps you troubl
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 
 ## Configure %plugin_name% {id="configure"}
@@ -130,6 +130,6 @@ Using `%plugin_name%` along with [CallLogging](call-logging.md) helps you troubl
 This key can be passed to a [logger configuration](logging.md#configure-logger) to show call IDs in the log. For instance, the `logback.xml` file might look as follows:
 ```
 ```
-{style="block" src="snippets/call-id/src/main/resources/logback.xml" lines="2-6"}
+{style="block" src="snippets/call-id/src/main/resources/logback.topic" lines="2-6"}
 
 You can find the full example here: [call-id](https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/call-id).

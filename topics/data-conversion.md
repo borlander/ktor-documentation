@@ -1,28 +1,28 @@
 [//]: # (title: Data conversion)
 
-<include src="lib.xml" include-id="outdated_warning"/>
+<include from="lib.topic" element-id="outdated_warning"/>
 
 <var name="artifact_name" value="ktor-server-data-conversion"/>
 <var name="plugin_name" value="DataConversion"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
-</microformat>
+</tldr>
 
 `%plugin_name%` is a plugin that allows to serialize and deserialize a list of values. By default, it handles primitive types and enums, but it can also be configured to handle additional types. If you are using the [Locations plugin](locations.md) and want to support custom types as part of its parameters, you can add new custom converters with this service.
 
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 ## Add converters {id="add-converters"}
 

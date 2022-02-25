@@ -1,9 +1,9 @@
 [//]: # (title: Timeout)
 
-<microformat>
+<tldr>
 <var name="example_name" value="client-timeout"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 The `HttpTimeout` plugin allows you to configure the following timeouts:
 * __request timeout__ — a time period required to process an HTTP call: from sending a request to receiving a response.

@@ -3,13 +3,13 @@
 <var name="plugin_name" value="DoubleReceive"/>
 <var name="artifact_name" value="ktor-server-double-receive"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="double-receive"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
 The `%plugin_name%` plugin provides the ability to [receive a request body](requests.md#body_contents) several times with no `RequestAlreadyConsumedException` exception.
 This might be useful if a [plugin](Plugins.md) is already consumed a request body, so you cannot receive it inside a route handler.
@@ -21,12 +21,12 @@ For example, you can use `%plugin_name%` to log a request body using the [CallLo
 
 ## Add dependencies {id="add_dependencies"}
 
-<include src="lib.xml" include-id="add_ktor_artifact_intro"/>
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact_intro"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install %plugin_name% {id="install_plugin"}
 
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 After that, you can [receive a request body](requests.md#body_contents) several times and every invocation returns the same instance.
 For example, you can enable logging of a request body using the [CallLogging](call-logging.md) plugin...

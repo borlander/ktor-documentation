@@ -2,17 +2,17 @@
 
 <var name="artifact_name" value="ktor-client-encoding"/>
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:%artifact_name%</code>
 </p>
 <var name="example_name" value="client-content-encoding"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>
+<link-summary>
 The ContentEncoding plugin allows you to enable specified compression algorithms (such as 'gzip' and 'deflate') and configure their settings.
-</excerpt>
+</link-summary>
 
 The Ktor client provides the `ContentEncoding` plugin that allows you to enable specified compression algorithms (such as `gzip` and `deflate`) and configure their settings. This plugin serves two primary purposes:
 * Sets the `Accept-Encoding` header with the specified quality value.
@@ -22,7 +22,7 @@ The Ktor client provides the `ContentEncoding` plugin that allows you to enable 
 ## Add dependencies {id="add_dependencies"}
 To use `ContentEncoding`, you need to include the `%artifact_name%` artifact in the build script:
 
-<include src="lib.xml" include-id="add_ktor_artifact"/>
+<include from="lib.topic" element-id="add_ktor_artifact"/>
 
 ## Install ContentEncoding {id="install_plugin"}
 To install `ContentEncoding`, pass it to the `install` function inside a [client configuration block](create-client.md#configure-client):

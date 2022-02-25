@@ -1,15 +1,15 @@
 [//]: # (title: Micrometer metrics)
 [micrometer_jvm_metrics]: https://micrometer.io/docs/ref/jvm
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:ktor-server-metrics-micrometer</code>
 </p>
 <var name="example_name" value="micrometer-metrics"/>
-<include src="lib.xml" include-id="download_example"/>
-</microformat>
+<include from="lib.topic" element-id="download_example"/>
+</tldr>
 
-<excerpt>The MicrometerMetrics plugin enables Micrometer metrics in your Ktor server application and allows you to choose the required monitoring system, such as Prometheus, JMX, Elastic, and so on.</excerpt>
+<link-summary>The MicrometerMetrics plugin enables Micrometer metrics in your Ktor server application and allows you to choose the required monitoring system, such as Prometheus, JMX, Elastic, and so on.</link-summary>
 
 The [MicrometerMetrics](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor-server-metrics-micrometer/io.ktor.server.metrics.micrometer/-micrometer-metrics/index.html) plugin enables [Micrometer](https://micrometer.io/docs) metrics in your Ktor server application and allows you to choose the required monitoring system, such as Prometheus, JMX, Elastic, and so on. By default, Ktor exposes metrics for monitoring HTTP requests and a set of low-level metrics for [monitoring the JVM][micrometer_jvm_metrics]. You can customize these metrics or create new ones.
 
@@ -17,19 +17,19 @@ The [MicrometerMetrics](https://api.ktor.io/ktor-server/ktor-server-plugins/ktor
 To enable `MicrometerMetrics`, you need to include the following artifacts in the build script:
 * Add the `ktor-server-metrics-micrometer` dependency:
     <var name="artifact_name" value="ktor-server-metrics-micrometer"/>
-    <include src="lib.xml" include-id="add_ktor_artifact"/>
+    <include from="lib.topic" element-id="add_ktor_artifact"/>
   
 * Add a dependency required for a monitoring system. The example below shows how to add an artifact for Prometheus:
     <var name="group_id" value="io.micrometer"/>
     <var name="artifact_name" value="micrometer-registry-prometheus"/>
     <var name="version" value="prometheus_version"/>
-    <include src="lib.xml" include-id="add_artifact"/>
+    <include from="lib.topic" element-id="add_artifact"/>
     You can replace `$prometheus_version` with the required version of the `micrometer-registry-prometheus` artifact, for example, `%prometheus_version%`.
 
 ## Install MicrometerMetrics {id="install_plugin"}
 
 <var name="plugin_name" value="MicrometerMetrics"/>
-<include src="lib.xml" include-id="install_plugin"/>
+<include from="lib.topic" element-id="install_plugin"/>
 
 ### Exposed metrics {id="ktor_metrics"}
 Ktor exposes the following metrics for monitoring HTTP requests:

@@ -1,6 +1,6 @@
 [//]: # (title: JSON Web Tokens)
 
-<microformat>
+<tldr>
 <p>
 <b>Required dependencies</b>: <code>io.ktor:ktor-server-auth</code>, <code>io.ktor:ktor-server-auth-jwt</code>
 </p>
@@ -9,7 +9,7 @@
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/auth-jwt-hs256">auth-jwt-hs256</a>, 
 <a href="https://github.com/ktorio/ktor-documentation/tree/%current-branch%/codeSnippets/snippets/auth-jwt-rs256">auth-jwt-rs256</a>
 </p>
-</microformat>
+</tldr>
 
 [JSON Web Token](https://jwt.io/) is an open standard that defines a way for securely transmitting information between parties as a JSON object. This information can be verified and trusted since it is signed using a shared secret (with the `HS256` algorithm) or a public/private key pair (for example, `RS256`).
 
@@ -25,19 +25,19 @@ To enable `JWT`authentication, you need to include the `ktor-server-auth` and `k
 
 <tabs group="languages">
     <tab title="Gradle (Kotlin)" group-key="kotlin">
-        <code style="block" lang="Kotlin" title="Sample">
+        <code-block lang="Kotlin" title="Sample">
             implementation("io.ktor:ktor-server-auth:$ktor_version")
             implementation("io.ktor:ktor-server-auth-jwt:$ktor_version")
-        </code>
+        </code-block>
     </tab>
     <tab title="Gradle (Groovy)" group-key="groovy">
-        <code style="block" lang="Groovy" title="Sample">
+        <code-block lang="Groovy" title="Sample">
             implementation "io.ktor:ktor-server-auth:$ktor_version"
             implementation "io.ktor:ktor-server-auth-jwt:$ktor_version"
-        </code>
+        </code-block>
     </tab>
     <tab title="Maven" group-key="maven">
-        <code style="block" lang="XML" title="Sample">
+        <code-block lang="XML" title="Sample">
 &lt;dependency&gt;
 &lt;groupId&gt;io.ktor&lt;/groupId&gt;
 &lt;artifactId&gt;ktor-server-auth&lt;/artifactId&gt;
@@ -48,7 +48,7 @@ To enable `JWT`authentication, you need to include the `ktor-server-auth` and `k
 &lt;artifactId&gt;ktor-server-auth-jwt&lt;/artifactId&gt;
 &lt;version&gt;${ktor_version}&lt;/version&gt;
 &lt;/dependency&gt;
-        </code>
+        </code-block>
    </tab>
 </tabs>
 
@@ -93,7 +93,7 @@ You can find full runnable projects here: [auth-jwt-hs256](https://github.com/kt
 
 ### Step 1: Configure JWT settings {id="jwt-settings"}
 
-To configure JWT-related settings, you can create a custom `jwt` group in the [application.conf](Configurations.xml#hocon-file) configuration file. This file might look as follows:
+To configure JWT-related settings, you can create a custom `jwt` group in the [application.conf](Configurations.topic#hocon-file) configuration file. This file might look as follows:
 
 <tabs group="sign-alg">
 <tab title="HS256" group-key="hs256">
@@ -112,11 +112,11 @@ To configure JWT-related settings, you can create a custom `jwt` group in the [a
 </tab>
 </tabs>
 
-> Note that secret information should not be stored in the configuration file as plain text. Consider using [environment variables](Configurations.xml#environment-variables) to specify such parameters.
+> Note that secret information should not be stored in the configuration file as plain text. Consider using [environment variables](Configurations.topic#environment-variables) to specify such parameters.
 >
 {type="warning"}
 
-You can [access these settings in code](Configurations.xml#read-configuration-in-code) in the following way:
+You can [access these settings in code](Configurations.topic#read-configuration-in-code) in the following way:
 
 <tabs group="sign-alg">
 <tab title="HS256" group-key="hs256">
